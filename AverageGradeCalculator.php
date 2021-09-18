@@ -34,7 +34,7 @@ class AverageGradeCalculator{
     public function calculateGradeAverage(){
 
         return $this->addGrades() / $this->countGrades();
-        
+
     }
 
 }
