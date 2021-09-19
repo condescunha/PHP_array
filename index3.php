@@ -1,5 +1,7 @@
 <?php
 
+namespace condelua;
+
 $names = "Mateus, Marcos, Lucas, João";
 
 $arrayNames = explode(", ", $names);

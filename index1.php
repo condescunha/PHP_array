@@ -1,5 +1,8 @@
-<?php
-require 'AverageGradeCalculator.php';
+<?php 
+
+namespace condelua;
+
+require 'autoload.php';
 
 $grades = [9, 3, 10, 5, 10, 8];
 $averageGradeCalculator = new AverageGradeCalculator($grades);

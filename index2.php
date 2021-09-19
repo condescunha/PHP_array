@@ -1,5 +1,7 @@
 <?php
 
+namespace condelua;
+
 $balances = [2500, 3000, 1000, 3700, 950, 9000];
 
 foreach ($balances as $balance) {

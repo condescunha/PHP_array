@@ -1,5 +1,7 @@
 <?php
 
+namespace condelua;
+
 class AverageGradeCalculator{
 
     public array $grades;

@@ -1,11 +1,13 @@
 <?php declare(strict_types=1);
 
-require "ArrayUtils.php";
+namespace condelua;
+
+require 'autoload.php';
 
 $accountHoldersAndTheirPurchasesList = ["Giovani", 12, "Maria", 25, "Luís", "Luísa", "12"];
 
 //call static method
-ArrayUtils::removeElement("12", $accountHoldersAndTheirPurchasesList);
+ArrayUtils::removeElement("nonexist", $accountHoldersAndTheirPurchasesList);
 
 $arrayToString = implode(", ", $accountHoldersAndTheirPurchasesList);
 

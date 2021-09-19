@@ -1,5 +1,7 @@
 <?php declare(strict_types=1); //does not allow code conversions
 
+namespace condelua;
+
 class ArrayUtils{
 
     public static function removeElement(string $targetElement, array &$targetArray){
