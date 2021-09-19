@@ -1,17 +1,12 @@
-<?php
+<?php declare(strict_types=1);
 
-$names = "Mateus, Marcos, Lucas, João";
+require "ArrayUtils.php";
 
-$arrayNames = explode(", ", $names);
+$accountHoldersAndTheirPurchasesList = ["Giovani", 12, "Maria", 25, "Luís", "Luísa", "12"];
 
-foreach ($arrayNames as $name) {
+//call static method
+ArrayUtils::removeElement("12", $accountHoldersAndTheirPurchasesList);
 
-    echo "<p>Olá {$name}!</p>";
+$arrayToString = implode(", ", $accountHoldersAndTheirPurchasesList);
 
-}
-
-echo "<hr>"; //------------------------------
-
-$stringNames = implode(", ", $arrayNames);
-
-echo "{$stringNames}";
+echo "<p>{$arrayToString}</p>";
