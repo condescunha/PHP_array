@@ -10,7 +10,7 @@ $stringAccountHoldersAndBalancesMerged = implode(", ", $mergeAccountHoldersAndBa
 
 echo "{$stringAccountHoldersAndBalancesMerged}";
 
-echo "<hr>";
+echo "<hr>"; // -----------------------------------------------------------------------------
 
 //associative array
 $combineAccountHoldersWithBalances = array_combine($accountHolderS, $balances);
@@ -18,3 +18,17 @@ $combineAccountHoldersWithBalances = array_combine($accountHolderS, $balances);
 echo "<pre>";
 var_dump($combineAccountHoldersWithBalances);
 echo "</pre>";
+
+echo "<hr>"; // -----------------------------------------------------------------------------
+
+$key = "Maria";
+
+if (array_key_exists($key, $combineAccountHoldersWithBalances)) {
+    
+    echo "The holder's balance, {$key}, is {$combineAccountHoldersWithBalances[$key]}.";
+
+} else {
+
+    echo "{$key} is a nonexistent holder!";
+
+}
