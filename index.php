@@ -1,14 +1,20 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace condelua;
+$accountHolderS = ["Giovani", "João", "Maria", "Luís", "Luísa", "Rafael"];
 
-require 'autoload.php';
+$balances = [2500, 3000, 4400, 1000, 8700, 9000];
 
-$accountHoldersAndTheirPurchasesList = ["Giovani", 12, "Maria", 25, "Luís", "Luísa", "12"];
+$mergeAccountHoldersAndBalances = array_merge($accountHolderS, $balances);
 
-//call static method
-ArrayUtils::removeElement("nonexist", $accountHoldersAndTheirPurchasesList);
+$stringAccountHoldersAndBalancesMerged = implode(", ", $mergeAccountHoldersAndBalances);
 
-$arrayToString = implode(", ", $accountHoldersAndTheirPurchasesList);
+echo "{$stringAccountHoldersAndBalancesMerged}";
 
-echo "<p>{$arrayToString}</p>";
+echo "<hr>";
+
+//associative array
+$combineAccountHoldersWithBalances = array_combine($accountHolderS, $balances);
+
+echo "<pre>";
+var_dump($combineAccountHoldersWithBalances);
+echo "</pre>";
