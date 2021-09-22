@@ -29,4 +29,15 @@ class ArrayUtils{
 
     }
 
+    public static function findPeopleWithHigherBalance(int $balance, array $targetArray): array{
+
+        $peopleWithHigherBalance = array();
+        foreach ($targetArray as $key => $value) {
+            if ($value > $balance) {
+                $peopleWithHigherBalance [] = $key;
+            }
+        }
+        return $peopleWithHigherBalance;
+    }
+
 }
